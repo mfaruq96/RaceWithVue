@@ -12,7 +12,6 @@
         <div id="content">
           <!-- Topbar -->
           <TopbarComponent />
-
           <!-- End of Topbar -->
 
           <!-- Begin Page Content -->
