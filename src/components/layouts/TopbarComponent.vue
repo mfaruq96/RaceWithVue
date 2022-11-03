@@ -26,7 +26,7 @@
                 </span>
               </span>
               <div class="dropdown-content dropdown-menu-right">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" @click="clickSoon">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
@@ -54,6 +54,12 @@
 <script>
 export default {
   name: "TopbarComponent2",
+
+  methods: {
+    clickSoon() {
+      alert("coming soon");
+    },
+  },
 };
 </script>
 
