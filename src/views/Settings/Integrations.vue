@@ -36,102 +36,62 @@
             </div>
             <!-- End Breadcrum -->
             <h1 class="h3 mb-4 text-gray-800">Integrations</h1>
-            <!-- count -->
             <div class="row mb-4">
-              <!-- request pickup -->
-              <div class="col-lg-3 col-md-6 mb-3">
-                <div class="card border-left-primary shadow h-100 py-2">
+              <div class="col">
+                <div class="card shadow">
                   <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div
-                          class="text-xs font-weight-bold text-primary text-uppercase mb-1"
-                        >
-                          Request Pickup
-                        </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          21
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-archive fa-3x text-primary"></i>
-                      </div>
+                    <button class="btn btn-sm btn-primary mb-3">
+                      <i class="fas fa-store mr-2"></i>
+                      ADD NEW
+                    </button>
+                    <div class="table-responsive mb-3">
+                      <table
+                        class="table table-bordered table-striped"
+                        id="dataTable"
+                        width="100%"
+                      >
+                        <thead>
+                          <tr class="text-nowrap">
+                            <th>SERVICE</th>
+                            <th>IDENTIFIER</th>
+                            <th>TYPE</th>
+                            <th>LAST IMPORTED</th>
+                            <th>LAST EXPORTED</th>
+                            <th>SYNC STOCK</th>
+                          </tr>
+                        </thead>
+                        <tbody class="text-nowrap">
+                          <tr>
+                            <td>Shopee</td>
+                            <td>SH-2012</td>
+                            <td>Seller</td>
+                            <td>03-11-2022</td>
+                            <td>03-11-2022</td>
+                            <td>1200</td>
+                          </tr>
+                          <tr>
+                            <td>Tokopedia</td>
+                            <td>SH-2012</td>
+                            <td>Seller</td>
+                            <td>03-11-2022</td>
+                            <td>03-11-2022</td>
+                            <td>1200</td>
+                          </tr>
+                          <tr>
+                            <td>Lazada</td>
+                            <td>SH-2012</td>
+                            <td>Seller</td>
+                            <td>03-11-2022</td>
+                            <td>03-11-2022</td>
+                            <td>1200</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- end request pickup -->
-              <!-- request inbound -->
-              <div class="col-lg-3 col-md-6 mb-3">
-                <div class="card border-left-success shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div
-                          class="text-xs font-weight-bold text-success text-uppercase mb-1"
-                        >
-                          Inbound
-                        </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          21
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-plus-circle fa-3x text-success"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- end inbound -->
-              <!-- request proccess -->
-              <div class="col-lg-3 col-md-6 mb-3">
-                <div class="card border-left-primary shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div
-                          class="text-xs font-weight-bold text-primary text-uppercase mb-1"
-                        >
-                          Proccess
-                        </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          21
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-folder-open fa-3x text-primary"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- end proccess -->
-              <!-- request outbound -->
-              <div class="col-lg-3 col-md-6 mb-3">
-                <div class="card border-left-danger shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div
-                          class="text-xs font-weight-bold text-danger text-uppercase mb-1"
-                        >
-                          Outbound
-                        </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          21
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-minus-circle fa-3x text-danger"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- end outbound -->
             </div>
-            <!-- end count -->
           </div>
           <!-- /.container-fluid -->
         </div>
@@ -218,12 +178,26 @@ import SidebarComponent from "@/components/layouts/SidebarComponent.vue";
 import TopbarComponent from "@/components/layouts/TopbarComponent.vue";
 import FooterComponent from "@/components/layouts/FooterComponent.vue";
 
+import $ from "jquery";
+
 export default {
   name: "IntegrationsView",
   components: {
     SidebarComponent,
     TopbarComponent,
     FooterComponent,
+  },
+
+  mounted() {
+    this.getData();
+  },
+
+  methods: {
+    getData() {
+      $(document).ready(function () {
+        $("#dataTable").DataTable();
+      });
+    },
   },
 };
 </script>
