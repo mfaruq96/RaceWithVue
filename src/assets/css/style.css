@@ -1,0 +1,29 @@
+.div-active-product {
+  background-color: #ccd1cb;
+  opacity: 95%;
+  padding: 8px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.div-active-sidebar {
+  background-color: #717475;
+}
+
+.div-footer {
+  font-weight: bold;
+  color: #abb2b9;
+}
+
+.div-img-profile {
+  width: 30px;
+}
+
+.div-topbar {
+  color: #2c3e50;
+  background-color: white;
+}
+
+.div-color-topbar {
+  background-color: #808b96;
+}
