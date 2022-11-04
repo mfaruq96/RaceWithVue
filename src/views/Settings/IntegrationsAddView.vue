@@ -45,7 +45,7 @@
                 <div class="card shadow">
                   <div class="card-body">
                     <div class="row text-center">
-                      <div class="col-lg-2 col-md-4 mb-3">
+                      <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
                         <router-link to="#">
                           <div class="div-image">
                             <img
@@ -59,7 +59,7 @@
                           </div>
                         </router-link>
                       </div>
-                      <div class="col-lg-2 col-md-4 mb-3">
+                      <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
                         <router-link to="#">
                           <div class="div-image">
                             <img
@@ -73,7 +73,7 @@
                           </div>
                         </router-link>
                       </div>
-                      <div class="col-lg-2 col-md-4 mb-3">
+                      <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
                         <router-link to="#">
                           <div class="div-image">
                             <img
@@ -87,7 +87,7 @@
                           </div>
                         </router-link>
                       </div>
-                      <div class="col-lg-2 col-md-4 mb-3">
+                      <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
                         <router-link to="#">
                           <div class="div-image">
                             <img
@@ -101,7 +101,7 @@
                           </div>
                         </router-link>
                       </div>
-                      <div class="col-lg-2 col-md-4 mb-3">
+                      <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
                         <router-link to="#">
                           <div class="div-image">
                             <img
@@ -115,7 +115,7 @@
                           </div>
                         </router-link>
                       </div>
-                      <div class="col-lg-2 col-md-4 mb-3">
+                      <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
                         <router-link to="#">
                           <div class="div-image">
                             <img
@@ -129,7 +129,7 @@
                           </div>
                         </router-link>
                       </div>
-                      <div class="col-lg-2 col-md-4 mb-3">
+                      <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
                         <router-link to="#">
                           <div class="div-image">
                             <img
@@ -143,7 +143,7 @@
                           </div>
                         </router-link>
                       </div>
-                      <div class="col-lg-2 col-md-4 mb-3">
+                      <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
                         <router-link to="#">
                           <div class="div-image">
                             <img
@@ -157,7 +157,7 @@
                           </div>
                         </router-link>
                       </div>
-                      <div class="col-lg-2 col-md-4 mb-3">
+                      <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
                         <router-link to="#">
                           <div class="div-image">
                             <img
@@ -171,7 +171,7 @@
                           </div>
                         </router-link>
                       </div>
-                      <div class="col-lg-2 col-md-4 mb-3">
+                      <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
                         <router-link to="#">
                           <div class="div-image">
                             <img

@@ -85,7 +85,7 @@
 .div-image__img {
   display: block;
   width: 100%;
-  height: 140px;
+  height: 160px;
 }
 
 .div-image__overlay {
@@ -97,7 +97,6 @@
   background-color: #717475;
   opacity: 0;
   display: flex;
-  /* color: white; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
