@@ -36,6 +36,7 @@
             </div>
             <!-- End Breadcrum -->
             <h1 class="h3 mb-4 text-gray-800">Dashboard</h1>
+            <span></span>
             <!-- count -->
             <div class="row mb-4">
               <!-- request pickup -->
@@ -50,7 +51,7 @@
                           Request Pickup
                         </div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          21
+                          {{ request_pickup.length }}
                         </div>
                       </div>
                       <div class="col-auto">
@@ -73,7 +74,7 @@
                           Inbound
                         </div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          21
+                          {{ inbound.length }}
                         </div>
                       </div>
                       <div class="col-auto">
@@ -96,7 +97,7 @@
                           Proccess
                         </div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          21
+                          {{ proses.length }}
                         </div>
                       </div>
                       <div class="col-auto">
@@ -119,7 +120,7 @@
                           Outbound
                         </div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          21
+                          {{ outbound.length }}
                         </div>
                       </div>
                       <div class="col-auto">
@@ -341,6 +342,10 @@ import LineChartComponent from "@/components/charts/LineChartComponent.vue";
 import PieChartComponent from "@/components/charts/PieChartComponent.vue";
 import MapsComponent from "@/components/MapsComponent.vue";
 
+// const axios = require("axios").default;
+// const axios = require("axios");
+import axios from "axios";
+
 export default {
   name: "DashboardView",
   components: {
@@ -350,6 +355,74 @@ export default {
     LineChartComponent,
     PieChartComponent,
     MapsComponent,
+  },
+
+  // data
+  data() {
+    return {
+      request_pickup: [],
+      inbound: [],
+      proses: [],
+      outbound: [],
+    };
+  },
+
+  // method
+  methods: {
+    setJumlah(data) {
+      this.request_pickup = data;
+    },
+
+    setInbound(data) {
+      this.inbound = data;
+    },
+
+    setProses(data) {
+      this.proses = data;
+    },
+
+    setOutbound(data) {
+      this.outbound = data;
+    },
+  },
+
+  // mounted
+  mounted() {
+    // request pickup
+    axios
+      .get("http://localhost:3000/request-pickup")
+      .then(
+        (response) => this.setJumlah(response.data)
+        // console.log(response.data)
+      )
+      .catch((error) => console.log(error));
+
+    // inbound
+    axios
+      .get("http://localhost:3000/inbound")
+      .then(
+        (response) => this.setInbound(response.data)
+        // console.log(response.data)
+      )
+      .catch((error) => console.log(error));
+
+    // proses
+    axios
+      .get("http://localhost:3000/proses")
+      .then(
+        (response) => this.setProses(response.data)
+        // console.log(response.data)
+      )
+      .catch((error) => console.log(error));
+
+    // outbound
+    axios
+      .get("http://localhost:3000/outbound")
+      .then(
+        (response) => this.setOutbound(response.data)
+        // console.log(response.data)
+      )
+      .catch((error) => console.log(error));
   },
 };
 </script>

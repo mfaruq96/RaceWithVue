@@ -40,10 +40,13 @@
               <div class="col">
                 <div class="card shadow">
                   <div class="card-body">
-                    <button class="btn btn-sm btn-primary mb-3">
+                    <router-link
+                      to="/integrations/add"
+                      class="btn btn-sm btn-primary mb-3"
+                    >
                       <i class="fas fa-store mr-2"></i>
                       ADD NEW
-                    </button>
+                    </router-link>
                     <div class="table-responsive mb-3">
                       <table
                         class="table table-bordered table-striped"

@@ -14,7 +14,8 @@ import TrackingView from '../views/Shipment/TrackingView.vue'
 import OrdersView from '../views/Shipment/OrdersView.vue'
 
 // view settings
-import IntegrationsView from '../views/Settings/Integrations.vue'
+import IntegrationsView from '../views/Settings/IntegrationsView.vue'
+import IntegrationsAddView from '../views/Settings/IntegrationsAddView.vue'
 
 Vue.use(VueRouter)
 
@@ -35,6 +36,7 @@ const routes = [
 
   // settings
   { path: '/integrations', name: 'integrations', component: IntegrationsView },
+  { path: '/integrations/add', name: 'integrationsadd', component: IntegrationsAddView },
 
 ]
 
